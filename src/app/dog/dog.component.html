@@ -2,9 +2,7 @@
   <h2>Cute Dogs:</h2>
   <ul>
     <li *ngFor="let dog of dogs">
-      <span>{{dog.id}}</span> - {{dog.name}}
+      <a routerLink="/view/{{dog.id}}">{{dog.name}}</a>       
     </li>
   </ul>
 </div>
-
-

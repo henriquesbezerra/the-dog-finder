@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { DOGS } from '../mock-dog';
+import { DogService } from '../dog.service';
+import { DogList } from './dog';
 
 @Component({
   selector: 'app-dog',
@@ -10,11 +10,17 @@ import { DOGS } from '../mock-dog';
 
 export class DogComponent implements OnInit {
   
-  dogs = DOGS;
+  dogs: DogList[];  
 
-  constructor() { }
+  constructor(private dogService: DogService){}
 
   ngOnInit() {
+    this.getDogsList();
+  }
+
+  getDogsList(): void{
+    this.dogService.getDogList()
+      .subscribe(dogs => this.dogs = dogs);   
   }
 
 }

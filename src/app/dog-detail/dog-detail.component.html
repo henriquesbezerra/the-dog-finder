@@ -1,0 +1,6 @@
+<div *ngIf="dog">
+  <h2>{{dog.name | uppercase}} Detalhes</h2>
+  <p>Id: {{dog.id}}</p>
+  <p>Name: {{dog.name}}</p>
+</div>
+<button (click) ="goBack()">Voltar</button>
