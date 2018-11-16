@@ -4,8 +4,9 @@ import { DogComponent } from './dog/dog.component';
 import { DogDetailComponent } from './dog-detail/dog-detail.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/dogs', pathMatch: 'full' },
   { path: 'dogs', component: DogComponent },
-  { path: 'view/:id' , component: DogDetailComponent }
+  { path: 'view/:id' , component: DogDetailComponent }  
 ];
 
 @NgModule({

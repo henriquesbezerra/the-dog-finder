@@ -1,0 +1,18 @@
+<mat-card *ngFor="let dog of dogs">
+  <mat-card-header>
+    <div mat-card-avatar></div>
+    <mat-card-title>{{dog.name}}</mat-card-title>  
+    <mat-card-subtitle>A Pretty Dog</mat-card-subtitle>  
+  </mat-card-header>
+  <img mat-card-image src="assets/dogs/{{dog.id}}.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+     {{dog.temperament}}
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button routerLink="/view/{{dog.id}}" color="accent">
+      <mat-icon>visibility</mat-icon>  Saiba Mais</button>    
+  </mat-card-actions>
+</mat-card>

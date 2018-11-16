@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { DogService } from '../dog.service';
 import { DogList } from './dog';
 
+
 @Component({
   selector: 'app-dog',
   templateUrl: './dog.component.html',
-  styleUrls: ['./dog.component.scss']
+  styleUrls: ['./dog.component.scss'], 
 })
+
 
 export class DogComponent implements OnInit {
   

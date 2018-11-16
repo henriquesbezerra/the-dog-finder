@@ -1,6 +1,54 @@
-<div *ngIf="dog">
-  <h2>{{dog.name | uppercase}} Detalhes</h2>
-  <p>Id: {{dog.id}}</p>
-  <p>Name: {{dog.name}}</p>
-</div>
-<button (click) ="goBack()">Voltar</button>
+<mat-card *ngIf="dog">
+  <mat-card-header>
+    <div mat-card-avatar></div>
+    <mat-card-title>{{dog.name}}</mat-card-title>  
+    <mat-card-subtitle>A Pretty Dog</mat-card-subtitle>  
+  </mat-card-header>
+  <img mat-card-image src="assets/dogs/{{dog.id}}.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p class="mat-card-content-info">
+      <span class="mat-card-content-attr">Temperament: </span>
+      <span class="mat-card-content-val">{{dog.temperament}}</span>
+    </p>
+
+    <p class="mat-card-content-info">
+      <span class="mat-card-content-attr">Life span: </span>
+      <span class="mat-card-content-val">{{dog.life_span}}</span>
+    </p>
+
+    <p class="mat-card-content-info">
+      <span class="mat-card-content-attr">Bred for: </span>
+      <span class="mat-card-content-val">{{dog.bred_for}}</span>
+    </p>
+
+    <p class="mat-card-content-info">
+      <span class="mat-card-content-attr">Breed group: </span>
+      <span class="mat-card-content-val">{{dog.breed_group}}</span>
+    </p>
+
+    <p class="mat-card-content-info">
+      <span class="mat-card-content-attr">Weight: </span>
+      <span class="mat-card-content-val">{{dog.weight.imperial}}</span>
+    </p>
+
+    <p class="mat-card-content-info">
+      <span class="mat-card-content-attr">Weight metric: </span>
+      <span class="mat-card-content-val">{{dog.weight.metric}}</span>
+    </p>
+
+    <p class="mat-card-content-info">
+      <span class="mat-card-content-attr">Height: </span>
+      <span class="mat-card-content-val">{{dog.height.imperial}}</span>
+    </p>
+
+    <p class="mat-card-content-info">
+      <span class="mat-card-content-attr">Height metric: </span>
+      <span class="mat-card-content-val">{{dog.height.metric}}</span>
+    </p>     
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button (click) ="goBack()" color="accent">
+      <mat-icon>home</mat-icon> Voltar</button>    
+  </mat-card-actions>
+</mat-card>
