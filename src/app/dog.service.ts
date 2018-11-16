@@ -15,7 +15,7 @@ const httpOptions = {
 
 export class DogService {
   
-  private dogsUrl = 'http://henrisilva.com.br/the-dog-finder/dogs';
+  private dogsUrl = 'https://henrisilva.com.br/the-dog-finder/dogs';
 
   /**
    * Handle Http operation that failed.
